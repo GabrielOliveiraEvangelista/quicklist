@@ -1,3 +1,7 @@
+<p align="center">
+<a href="https://www.linkedin.com/in/gabrieloliveiradev/" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-@gabrieloliveiradev-blue?style=flat&logo=linkedin"></a>
+<a href="mailto:gabrieloliveiraevangelista.dev@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-gabrieloliveiraevangelista.dev@gmail.com-blue?style=flat&logo=gmail"></a>
+</p>
 
 # QuickList
 
@@ -17,7 +21,7 @@ QuickList é uma aplicação web simples projetada para facilitar a criação e 
 
 ## Demonstração
 
-[Vídeo de Demonstração](#) (img/videoReadme.mp4)
+[Vídeo de Demonstração](./img/videoReadme.mp4)
 
 ## Como Utilizar
 
@@ -68,3 +72,8 @@ Sinta-se à vontade para abrir issues ou enviar pull requests para melhorias.
 ## Licença
 
 Este projeto está licenciado sob a Licença MIT - consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+<p align="center">
+<a href="https://www.linkedin.com/in/gabrieloliveiradev/" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-@gabrieloliveiradev-blue?style=flat&logo=linkedin"></a>
+<a href="mailto:gabrieloliveiraevangelista.dev@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-gabrieloliveiraevangelista.dev@gmail.com-blue?style=flat&logo=gmail"></a>
+</p>
