@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e4e5f0;
+    font-family: "Inter", sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+#alinharHeader {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    margin-bottom: 16px;
+}
+
+h1 {
+    color: #111827;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 45px;
+}
+
+#div-inputs {
+    display: flex;
+
+    gap: 4px;
+}
+
+#div-inputs input {
+    color: #374151;
+    font-weight: 500;
+    border-radius: 8px;
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #D1D5DB;
+}
+
+input:focus {
+    outline: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    border-radius: 8px;
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 100%;
+    background-color: #CA3884;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    background-color: #ffffff;
+    padding: 12px 10px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+li span {
+    color: #979b9f;
+}
+
+#alinharLi span {
+    margin-left: 12px;
+    color: #374151;
+}
+
+#tamanhoLi {
+    max-height: 240px;
+    overflow: auto;
+}
+
+#containerBtn {
+    display: flex;
+    justify-content: space-between;
+}
+
+#btnExcluir,
+#btnImprimir {
+    width: 40px;
+}
+
+.btnDesativo {
+    display: none;
+}
+
+.btnAtivo {
+    display: block;
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+footer.btnAtivo {
+    animation: slideInFromTop 1s ease-out;
+    margin-top: 12px;
+    color: #ffffff;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-around;
+    background-color: #C93847;
+    padding: 12px 4px;
+    border-radius: 8px;
+}

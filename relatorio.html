@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #report {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        #report h1 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        #report .date {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        #header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            padding: 10px 0;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 10px;
+        }
+
+        #shoppingList {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        #shoppingList li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 16px;
+        }
+
+        #shoppingList li:last-child {
+            border-bottom: none;
+        }
+
+        @media print {
+            body {
+                background-color: #fff;
+            }
+
+            #report {
+                box-shadow: none;
+                border: none;
+            }
+
+            #report h1 {
+                color: #000;
+            }
+
+            #header {
+                border-bottom: 2px solid #000;
+            }
+
+            #shoppingList li {
+                border-bottom: 1px solid #000;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="report">
+        <h1>Lista de Compras</h1>
+        <div class="date" id="date"></div>
+
+        <div id="header">
+            <span>Produto</span>
+            <span>Quantidade</span>
+        </div>
+
+        <ul id="shoppingList">
+
+        </ul>
+    </div>
+
+    <script>
+        function formatDate() {
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const year = today.getFullYear();
+            return `${day}/${month}/${year}`;
+        }
+
+        document.getElementById('date').textContent = formatDate();
+
+        function addItems(items) {
+            const list = document.getElementById('shoppingList');
+            items.forEach(item => {
+                const li = document.createElement('li');
+                li.innerHTML = `<span>${item.nome}</span><span>${item.quantidade}</span>`;
+                list.appendChild(li);
+            });
+        }
+
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                items: JSON.parse(params.get('items'))
+            };
+        }
+
+        const { items } = getQueryParams();
+        addItems(items);
+    </script>
+</body>
+
+</html>
